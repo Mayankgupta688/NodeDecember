@@ -4,8 +4,16 @@ function Employee(name, age, designation) {
     this.userDesignation = designation;
 }
 
-Employee.prototype.getData = function() {
+Employee.prototype.getName = function() {
     console.log(this.userName)
+}
+
+Employee.prototype.getAge = function() {
+    console.log(this.userAge)
+}
+
+Employee.prototype.getDesignation = function() {
+    console.log(this.userDesignation)
 }
 
 Employee.prototype.count = 10;
@@ -16,8 +24,13 @@ var employeeTwo = new Employee("Anshul", 31, "Manager");
 
 var employeeThree = new Employee("Meha", 20, "Developer");
 
-debugger;
+employeeOne.getName()
+employeeOne.getAge()
 
-employeeOne.getData()
+employeeTwo.getName()
+employeeTwo.getAge()
 
-debugger;
+employeeThree.getName()
+employeeThree.getAge()
+
+employeeOne.toString()

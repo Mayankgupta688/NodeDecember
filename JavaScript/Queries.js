@@ -16,8 +16,8 @@ var employeeTwo = new Employee("Anshul", 31, "Manager");
 
 var employeeThree = new Employee("Meha", 20, "Developer");
 
-employeeOne.__proto__.getData()
-
 debugger;
 
-// Error - 2
+employeeOne.getData()
+
+debugger;

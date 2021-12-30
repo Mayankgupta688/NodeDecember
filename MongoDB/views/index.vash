@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>The employee list is given below:</h1>
+
+        <h2>@model.employeeList.length</h2>
+
+        @model.employeeList.forEach((emp) => {
+            <h2>@emp.name</h2>
+        })
+
+    </body>
+</html>

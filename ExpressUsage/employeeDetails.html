@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Details</title>
+    </head>
+
+    <body>
+        <h1>This is Rendered Using Ajax</h1>
+        <b>Employee Name: </b><b id="employeeName"></b><br/><br/>
+        <b>Employee Id: </b><b id="employeeId"></b><br/><br/>
+        <b>Employee Avatar: </b><b id="employeeAvatar"></b><br/><br/>
+
+        <script>
+            debugger;
+            fetch("http://localhost:4000/employees/" + location.pathname.split("/")[location.pathname.split("/").length -1 ]).then(res => res.json()).then((data) => {
+                document.getElementById("employeeName").innerText = data.name;
+                document.getElementById("employeeId").innerText = data.id;
+                document.getElementById("employeeAvatar").innerText = data.avatar;
+            })
+        </script>
+
+        <h1>This is Rendered Without Ajax..</h1>
+        <b>Employee Name: </b><b id="employeeName"></b><br/><br/>
+        <b>Employee Id: </b><b id="employeeId"></b><br/><br/>
+        <b>Employee Avatar: </b><b id="employeeAvatar"></b><br/><br/>
+    </body>
+</html>
